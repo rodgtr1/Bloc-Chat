@@ -1,0 +1,40 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+
+}
+
+h1.title {
+  
+}
+
+.left-column {
+  width: 25%;
+  background-color: gray;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden; 
+}
+
+.right-column {
+  width: 75%;
+  background-color: white;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:25%;
+  right:0;
+  overflow:hidden;
+
+}
+
+.left-column-text {
+  margin-left: 15px;
+}

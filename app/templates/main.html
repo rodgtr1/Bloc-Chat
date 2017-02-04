@@ -1,9 +1,25 @@
 <section>
-  <div>
-
-    <h1>Bloc Chat</h1>
-    
-    <p ng-repeat="room in main.chatrooms">{{ room.$value }}</p>
-    
+  
+  <div class="left-column">
+    <div class="left-column-text">
+      
+        <h1 class="title">Bloc Chat</h1>
+      
+      <button class="btn btn-info" ng-click="main.openModal()">New Room</button>
+      
+      <div ng-repeat="room in main.chatrooms">
+        <p>{{ room.$value }}</p>
+      </div>
+    </div>
   </div>
+
+</section>
+
+<section>
+  <div class="right-column">
+  
+    <p>Test, test</p>
+  
+  </div>
+  
 </section>
