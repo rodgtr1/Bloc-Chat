@@ -1,24 +1,40 @@
-<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <h1 id="page-title">Bloc Chat</h1>
+  </div>
+</nav>
+
+
+<section class="container sidebar">
   
-  <div class="left-column">
-    <div class="left-column-text">
-      
-        <h1 class="title">Bloc Chat</h1>
+  <div class="left-column col-sm-2">
       
       <button class="btn btn-info" ng-click="main.openModal()">New Room</button>
+    
+    <div class="list-group" ng-repeat="room in main.chatrooms">
+      <a href="" class="list-group-item" ng-click="main.setCurrentChatRoom(room); main.currentRoomShowing = true">{{room.$value}}</a>
       
-      <div ng-repeat="room in main.chatrooms">
-        <p>{{ room.$value }}</p>
-      </div>
+         <!--<a ng-click="home.setCurrentChatRoom(room); home.currentRoomShowing = true" href="#" class="list-group-item">{{ room.$value }}</a>-->
+         
+         
     </div>
   </div>
 
 </section>
 
-<section>
-  <div class="right-column">
+<section class="container">
+  <div class="right-column col-sm-10">
   
-    <p>Test, test</p>
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading" ng-show="main.currentRoomShowing"><h3>{{main.currentRoom.$value}}</h3></div>
+      
+
+      <!-- Table -->
+        <div class="panel-body">
+          <p ng-repeat="message in main.messages">{{ message.username }}: {{ message.content }}: {{ message.sentAt }}</p>
+        </div>
+    </div>
   
   </div>
   

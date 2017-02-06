@@ -13,28 +13,85 @@ h1.title {
 }
 
 .left-column {
-  width: 25%;
+  padding-top: 80px;
   background-color: gray;
+  box-sizing:content-box;
   position:absolute;
   top:0;
   bottom:0;
   left:0;
   right:0;
+  width: 25%;
   overflow:hidden; 
 }
 
 .right-column {
-  width: 75%;
+  padding-top: 70px;
   background-color: white;
+  box-sizing: content-box;
   position:absolute;
   top:0;
   bottom:0;
   left:25%;
   right:0;
+  width:75%;
   overflow:hidden;
 
 }
 
 .left-column-text {
   margin-left: 15px;
+}
+
+/*-------------------------------------
+/* Bootstrap Additions
+/*-------------------------------------
+*/
+.list-group {
+  margin-bottom: 5px;
+  max-width: 70%;
+}
+
+.btn-info {
+  margin-bottom: 8px;
+}
+
+.col-md-10 {
+  
+}
+
+.col-md-2 {
+  
+}
+
+
+
+
+/*-------------------------------------
+/* Media Queries
+/*-------------------------------------
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
 }
