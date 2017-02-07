@@ -1,71 +1,58 @@
 html {
   font-family: 'Open Sans', sans-serif;
-  min-height: 100%;
 }
 
-body {
+html,body,.container
+{
+  height:100%;
+  overflow: hidden;
+}
+.container
+{
+  display:table;
+  width: 100%;
+  padding: 5px; /*set left/right padding according to needs*/
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+header
+{
+  background: green;
+  height: 50px;
+}
+
+.row
+{
   height: 100%;
-
+  display: table-row;
 }
-
-h1.title {
-  
+@media (min-width: 992px) {
+  .row .no-float {
+    display: table-cell;
+    float: none;
+  }
 }
-
-.left-column {
+.col-md-3 {  
   padding-top: 80px;
-  background-color: gray;
-  box-sizing:content-box;
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  width: 25%;
-  overflow:hidden; 
+  background: #4E3D42;
+}
+.col-md-9 {
+  background: #7C7C7C;  	
 }
 
-.right-column {
-  padding-top: 70px;
-  background-color: white;
-  box-sizing: content-box;
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:25%;
-  right:0;
-  width:75%;
-  overflow:hidden;
-
-}
-
-.left-column-text {
-  margin-left: 15px;
-}
-
-/*-------------------------------------
-/* Bootstrap Additions
-/*-------------------------------------
-*/
 .list-group {
-  margin-bottom: 5px;
-  max-width: 70%;
+  margin-bottom: 3px;
 }
 
-.btn-info {
-  margin-bottom: 8px;
+textarea.form-control {
+  position: absolute;
+  bottom: 3px;
+  max-width: 98%
 }
 
-.col-md-10 {
-  
+.navbar {
+  background-color: #F5FBEF;
 }
-
-.col-md-2 {
-  
-}
-
-
-
 
 /*-------------------------------------
 /* Media Queries
