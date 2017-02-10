@@ -12,7 +12,7 @@
         templateUrl: '/templates/cookies.html',
       //CookieCtrl is where we will store entered username
         controller: 'CookieCtrl as cookie',
-        size: 'md',
+        size: 'sm',
         keyboard: false,
         backdrop: 'static'
       });

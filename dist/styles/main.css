@@ -1,84 +1,151 @@
-html {
+css html {
   font-family: 'Open Sans', sans-serif;
 }
 
-html,body,.container
-{
-  height:100%;
+html,
+body,
+.container {
+  height: 100%;
   overflow: hidden;
 }
-.container
-{
-  display:table;
+
+h1 {
+  color: whitesmoke;
+}
+
+.container {
+  display: table;
   width: 100%;
-  padding: 5px; /*set left/right padding according to needs*/
+  padding: 0px;
+  /*set left/right padding according to needs*/
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-header
-{
+
+header {
   background: green;
   height: 50px;
 }
 
-.row
-{
+.row {
   height: 100%;
   display: table-row;
 }
+
 @media (min-width: 992px) {
   .row .no-float {
     display: table-cell;
     float: none;
   }
 }
-.col-md-3 {  
+
+.col-md-3 {
   padding-top: 80px;
-  background: #4E3D42;
+  background: #233d4d;
 }
+
 .col-md-9 {
-  background: #7C7C7C;  	
+  background: #b5bec6;
 }
 
 .list-group {
   margin-bottom: 3px;
 }
 
-textarea.form-control {
+.message-write {
+  width: 100%;
+  padding-right: 25px;
   position: absolute;
-  bottom: 3px;
-  max-width: 98%
+  bottom: 0;
 }
 
-.navbar {
-  background-color: #F5FBEF;
+.message-write .send-form {
+  display: inline-block;
+  height: 50px;
+  border: 1px solid #bcbdc0;
+  width: 83%;
+  position: relative;
+  padding: 0 20px;
 }
+
+.message-write .send-button {
+  width: 15%;
+  height: 50px;
+  display: inline-block;
+  border: 2px solid #C06E52;
+  background-color: #C06E52;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  float: right;
+}
+
+/*
+textarea.form-control {
+position: absolute;
+bottom: 3px;
+max-width: 60%
+*/
+
+.navbar {
+  background-color: #233d4d;
+}
+
+.new-room-button {
+  margin-bottom: 3px;
+  background-color: #C06E52;
+  border-color: #C06E52;
+}
+
+/*-------------------------------------
+/* New Room Modal Box
+/*-------------------------------------*/
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+
 
 /*-------------------------------------
 /* Media Queries
 /*-------------------------------------
 
 /* Large desktops and laptops */
-@media (min-width: 1200px) {
 
-}
+@media (min-width: 1200px) {}
+
 
 /* Landscape tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
 
-}
+@media (min-width: 992px) and (max-width: 1199px) {}
+
 
 /* Portrait tablets and small desktops */
-@media (min-width: 768px) and (max-width: 991px) {
 
-}
+@media (min-width: 768px) and (max-width: 991px) {}
+
 
 /* Landscape phones and portrait tablets */
-@media (max-width: 767px) {
 
-}
+@media (max-width: 767px) {}
+
 
 /* Portrait phones and smaller */
-@media (max-width: 480px) {
 
-}
+@media (max-width: 480px) {}

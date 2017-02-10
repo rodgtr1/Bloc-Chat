@@ -4,8 +4,8 @@
     //function that with store username when ran in cookies.html
     this.setUserName = function() {
         $cookies.put('blocChatCurrentUser', this.username)
-        $uibModalInstance.close();
         console.log(this.username);
+        $uibModalInstance.close();
       } 
     };
 
