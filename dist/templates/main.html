@@ -6,9 +6,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="sidebar col-md-3 no-float">
+    <div class="sidebar col-sm-3 col-xs-12 no-float">
 
-      <button class="btn btn-info new-room-button" ng-click="main.openModal()">New Room</button>
+      <button class="btn btn-primary new-room-button" ng-click="main.openModal()">New Room</button>
 
       <div class="list-group" ng-repeat="room in main.chatrooms">
         <a href="" class="list-group-item" ng-click="main.setCurrentChatRoom(room); main.currentRoomShowing = true">{{room.$value}}</a>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="chatroom col-md-9 no-float">
+    <div class="chatroom col-sm-9 col-xs-12 no-float">
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
@@ -25,12 +25,15 @@
 
         <!-- Table -->
         <table class="table">
-          <p ng-repeat="message in main.messages">{{ message.username }}: {{ message.content }}: {{ message.sentAt }}</p>
+          <p class="chat-messages-group" ng-repeat="message in main.messages">
+            <span class="message-username">{{ message.username }}: </span>
+            <span class="message-content">{{ message.content }}: </span>
+            <span class="message-timestamp">{{ message.sentAt }}</span></p>
         </div>
       </table>
 
       <div class="row">
-      <div class="message-write clearfix">
+      <div class="message-write">
         <textarea class="form-control send-form" placeholder="type a message" ng-model="main.content"></textarea>
         <button type="submit" class="btn btn-primary send-button" ng-click="main.sendMessage()">Send</button>
       </div>

@@ -1,3 +1,5 @@
+
+
 css html {
   font-family: 'Open Sans', sans-serif;
 }
@@ -32,6 +34,11 @@ header {
   display: table-row;
 }
 
+.row .no-float {
+    display: table-cell;
+    float: none;
+  }
+
 @media (min-width: 992px) {
   .row .no-float {
     display: table-cell;
@@ -45,6 +52,15 @@ header {
 }
 
 .col-md-9 {
+  background: #b5bec6;
+}
+
+.col-sm-3 {
+  padding-top: 80px;
+  background: #233d4d;
+}
+
+.col-sm-9 {
   background: #b5bec6;
 }
 
@@ -97,6 +113,26 @@ max-width: 60%
   border-color: #C06E52;
 }
 
+.btn-primary:hover {
+  background-color: #C06E52;
+  border-color: #C06E52;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  background-color: #C06E52;
+  border-color: #C06E52;
+}
+
+.btn-primary.active, .btn-primary:active {
+  background-color: #C06E52;
+  border-color: #C06E52;
+}
+
+#username-btn {
+  background-color: #C06E52;
+  border-color: #C06E52;
+}
+
 /*-------------------------------------
 /* New Room Modal Box
 /*-------------------------------------*/
@@ -114,12 +150,33 @@ max-width: 60%
   margin-right: -4px;
 }
 
+.modal-content {
+  padding-left: 7px;
+  padding-bottom: 7px;
+}
+
 .modal-dialog {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
 }
 
+
+.chat-messages-group {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.message-username {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.message-content {
+}
+.message-timestamp {
+  float: right;
+}
 
 
 /*-------------------------------------
@@ -133,18 +190,20 @@ max-width: 60%
 
 /* Landscape tablets and medium desktops */
 
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+ 
+}
 
 
 /* Portrait tablets and small desktops */
 
 @media (min-width: 768px) and (max-width: 991px) {}
 
-
 /* Landscape phones and portrait tablets */
 
 @media (max-width: 767px) {}
-
+.col-sm-9 .col-xs-12 {
+}
 
 /* Portrait phones and smaller */
 
