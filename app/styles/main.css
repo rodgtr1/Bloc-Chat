@@ -34,26 +34,13 @@ header {
   display: table-row;
 }
 
-.row .no-float {
-    display: table-cell;
-    float: none;
-  }
-
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .row .no-float {
     display: table-cell;
     float: none;
   }
 }
 
-.col-md-3 {
-  padding-top: 80px;
-  background: #233d4d;
-}
-
-.col-md-9 {
-  background: #b5bec6;
-}
 
 .col-sm-3 {
   padding-top: 80px;
@@ -63,6 +50,7 @@ header {
 .col-sm-9 {
   background: #b5bec6;
 }
+
 
 .list-group {
   margin-bottom: 3px;
@@ -202,8 +190,7 @@ max-width: 60%
 /* Landscape phones and portrait tablets */
 
 @media (max-width: 767px) {}
-.col-sm-9 .col-xs-12 {
-}
+
 
 /* Portrait phones and smaller */
 
