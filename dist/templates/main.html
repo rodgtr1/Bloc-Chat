@@ -25,11 +25,12 @@
 
         <!-- Table -->
         <table class="table">
-          <p class="chat-messages-group" ng-repeat="message in main.messages">
+        <div class="chat-area">
+          <p class="chat-messages-group" ng-repeat="message in main.messages"><span class="underline">
             <span class="message-username">{{ message.username }}: </span>
-            <span class="message-content">{{ message.content }}: </span>
-            <span class="message-timestamp">{{ message.sentAt }}</span></p>
-        </div>
+            <span class="message-content">{{ message.content }} </span>
+            <span class="message-timestamp">{{ message.sentAt }}</span></span></p>
+          </div>
       </table>
 
       <div class="row">

@@ -1,14 +1,14 @@
-
-
-css html {
+html {
   font-family: 'Open Sans', sans-serif;
 }
 
 html,
 body,
-.container {
+.container,
+.col-sm-3,
+.col-sm-9{
   height: 100%;
-  overflow: hidden;
+  margin: 0 auto;
 }
 
 h1 {
@@ -34,14 +34,6 @@ header {
   display: table-row;
 }
 
-@media (min-width: 768px) {
-  .row .no-float {
-    display: table-cell;
-    float: none;
-  }
-}
-
-
 .col-sm-3 {
   padding-top: 80px;
   background: #233d4d;
@@ -49,6 +41,7 @@ header {
 
 .col-sm-9 {
   background: #b5bec6;
+  border-top: 1px solid #233d4d;
 }
 
 
@@ -60,7 +53,7 @@ header {
   width: 100%;
   padding-right: 25px;
   position: absolute;
-  bottom: 0;
+  bottom: 3px;
 }
 
 .message-write .send-form {
@@ -70,6 +63,7 @@ header {
   width: 83%;
   position: relative;
   padding: 0 20px;
+  font-size: 19px;
 }
 
 .message-write .send-button {
@@ -155,9 +149,16 @@ max-width: 60%
   padding: 10px;
 }
 
+.underline {
+/*  box-shadow: 2px 2px 7px #233d4d;*/
+  padding: 9px;
+}
+
+
 .message-username {
   font-weight: bold;
   padding-right: 10px;
+  max-width: 20%;
 }
 
 .message-content {
@@ -169,29 +170,56 @@ max-width: 60%
 
 /*-------------------------------------
 /* Media Queries
-/*-------------------------------------
+/*-------------------------------------*/
 
-/* Large desktops and laptops */
+@media (min-width: 992px) {
+    max-width: 100%;
+  }
 
-@media (min-width: 1200px) {}
-
-
-/* Landscape tablets and medium desktops */
-
-@media (min-width: 992px) and (max-width: 1199px) {
- 
+@media (min-width: 768px) {
+  .row .no-float {
+    display: table-cell;
+    float: none;
+  }
 }
 
+@media (max-width: 768px) {
+  .col-xs-12.sidebar {
+    height: 50%; 
+    overflow: auto;
+  }
+  
+  .col-xs-12.chatroom {
+    height: 50%; 
+    overflow: auto;
+    position: static;
+  }
+  
+  .list-group {
+    max-width: 85%;
+  }
 
-/* Portrait tablets and small desktops */
+  .message-write {
+    position: absolute;
+  }
+  
+  .message-write .send-form {
+    font-size: 15px;
+  }
+}
 
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (max-width: 390px) {
+  .message-write {
+    position: static;
+  }
+}
+  
+  .message-write .send-form {
+    width:78%;
 
-/* Landscape phones and portrait tablets */
-
-@media (max-width: 767px) {}
-
-
-/* Portrait phones and smaller */
-
-@media (max-width: 480px) {}
+  }
+  .message-write .send-button {
+    width: 19%;
+    margin-right: 5px;
+  }
+}
